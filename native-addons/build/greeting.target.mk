@@ -53,7 +53,7 @@ INCS_Debug := \
 	-I/Users/santiago/Library/Caches/node-gyp/22.20.0/deps/uv/include \
 	-I/Users/santiago/Library/Caches/node-gyp/22.20.0/deps/zlib \
 	-I/Users/santiago/Library/Caches/node-gyp/22.20.0/deps/v8/include \
-	-I/Users/santiago/Desktop/understanding-js/NodeJS_V8/node_modules/node-addon-api
+	-I/Users/santiago/Desktop/understanding-js/native-addons/node_modules/node-addon-api
 
 DEFS_Release := \
 	'-DNODE_GYP_MODULE_NAME=greeting' \
@@ -104,10 +104,10 @@ INCS_Release := \
 	-I/Users/santiago/Library/Caches/node-gyp/22.20.0/deps/uv/include \
 	-I/Users/santiago/Library/Caches/node-gyp/22.20.0/deps/zlib \
 	-I/Users/santiago/Library/Caches/node-gyp/22.20.0/deps/v8/include \
-	-I/Users/santiago/Desktop/understanding-js/NodeJS_V8/node_modules/node-addon-api
+	-I/Users/santiago/Desktop/understanding-js/native-addons/node_modules/node-addon-api
 
 OBJS := \
-	$(obj).target/$(TARGET)/greeting.o
+	$(obj).target/$(TARGET)/src/greeting.o
 
 # Add to the list of files we specially track dependencies for.
 all_deps += $(OBJS)

@@ -495,7 +495,7 @@
     "want_separate_host_toolset": 0,
     "xcode_version": "16.0",
     "nodedir": "/Users/santiago/Library/Caches/node-gyp/22.20.0",
-    "python": "/Users/santiago/.pyenv/versions/3.10.4/bin/python3",
+    "python": "/opt/homebrew/opt/python@3.11/bin/python3.11",
     "standalone_static_library": 1
   }
 }
