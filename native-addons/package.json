@@ -1,0 +1,16 @@
+{
+  "main": "lib/binding.js",
+  "dependencies": {
+    "node-addon-api": "^1.7.2"
+  },
+  "scripts": {
+    "test": "node --napi-modules ./test/test_binding.js",
+    "install": "node-gyp rebuild"
+  },
+  "gypfile": true,
+  "name": "nodejs-v8",
+  "version": "1.0.0",
+  "description": "Understanding NodeJS",
+  "author": "Santiago Sommer",
+  "license": "ISC"
+}
