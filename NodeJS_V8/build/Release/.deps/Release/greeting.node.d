@@ -1,1 +1,0 @@
-cmd_Release/greeting.node := c++ -bundle -undefined dynamic_lookup -Wl,-search_paths_first -mmacosx-version-min=10.7 -arch arm64 -L./Release -stdlib=libc++  -o Release/greeting.node Release/obj.target/greeting/greeting.o Release/nothing.a 
