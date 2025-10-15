@@ -17,4 +17,7 @@ For security reasons, Service Workers only work under:
 
 So make sure you are running it locally (e.g. `http://localhost:3000`) or under HTTPS.
 
-
+### Test
+1. Open your browser’s developer tools.
+2. Navigate to the **Application** tab.
+3. Under the **Service Workers** section, verify that your service worker is installed and active.
