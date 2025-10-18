@@ -2,6 +2,9 @@
 
 A minimal example demonstrating how to use a Service Worker for caching static assets.
 
+## Important
+After testing the service worker, unregister it. Otherwise, it might interfere with the other projects.
+
 ## How to run locally
 
 
