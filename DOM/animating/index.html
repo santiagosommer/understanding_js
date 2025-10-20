@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <p style="text-align: center">
+        <img src="img/cat.png" style="position: relative;">
+    </p>
+
+</body>
+
+<script>
+    let cat = document.querySelector("img");
+    let angle = Math.PI / 2;
+
+    function animate(time, lastTime) {
+        if (lastTime != null) {
+            angle += (time - lastTime) * 0.001;
+        }
+        // Calculate the current position of the image based on the angle.
+        // Use sin(angle) for vertical movement and cos(angle) for horizontal movement.
+        cat.style.top = (Math.sin(angle) * 20) + "px";
+        cat.style.left = (Math.cos(angle) * 200) + "px";
+        // Program to execute animate again before the next repaint
+        requestAnimationFrame(newTime => animate(newTime, time));
+    }
+    // Program to execute animate before the next repaint
+    // This would be the first frame
+    requestAnimationFrame(animate);
+</script>
+
+</html>
