@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <section>
+        This is a section
+        <div>
+            This is div
+            <p>A paragraph with a <button>button</button></p>
+        </div>
+    </section>
+
+    <script>
+        let section = document.querySelector("section");
+        let div = document.querySelector("div");
+        let para = document.querySelector("p");
+        let button = document.querySelector("button");
+
+        section.addEventListener("mousedown", (event) => {
+            console.log("This won't run");
+        });
+
+        div.addEventListener("mousedown", (event) => {
+            console.log("Div - This is the bubbling phase");
+            event.stopPropagation();
+        });
+
+        div.addEventListener("mousedown", (event) => {
+            console.log("This will run after stopPropagation");
+            event.stopImmediatePropagation();
+        });
+
+        div.addEventListener("mousedown", (event) => {
+            console.log("This won't");
+        });
+
+        para.addEventListener("mousedown", (event) => {
+            console.log("Paragraph - Capture phase, we intercept the flow with capture true");
+            console.log("We know where we want to go with event.target: ", event.target);
+        }, { capture: true }); // This intercepts the flow(capture phase), then continue normally
+
+        button.addEventListener("mousedown", (event) => {
+            console.log("Button - This is the target phase, event bubbles: ", event.bubbles);
+        });
+
+        button.addEventListener("mousedown", (event) => {
+            console.log("Button - The target with capture true is still in capture phase");
+        }, { capture: true });
+    </script>
+</body>
+
+</html>
